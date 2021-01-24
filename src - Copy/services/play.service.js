@@ -16,7 +16,7 @@ factory('PlayService', ['$http', 'ConfigService', function($http, ConfigService)
     service.joinQuiz = async (roomCode, playerName) => {
         const base = ConfigService.apiBase;
         const url = `${base}join/${encodeURIComponent(roomCode)}`;
-        // url like: http://localhost:8001/join/4294
+        console.log("Mike:->"+url);
         const data = { playerName: playerName };
         try {
             const response = await $http.post(url, data);

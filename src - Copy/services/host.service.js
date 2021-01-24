@@ -17,7 +17,7 @@ factory('HostService', ['$http', 'ConfigService', function($http, ConfigService)
         const base = ConfigService.apiBase;
         const url = `${base}host/${encodeURIComponent(quizId)}`;
         try {
-            // url will be like: http://localhost:8001/host/demo-quiz-1 see quiz-api
+            console.log('Mike:' + url)
             const response = await $http.post(url);
             return response.data;
         } catch (error) {
